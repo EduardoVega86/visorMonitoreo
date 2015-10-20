@@ -1,0 +1,33 @@
+/* Override styles in this file */
+/* aqui se genera */
+
+
+
+#toggle_legend {
+	z-index: 2000;
+	top: 100px;
+	}
+	
+	.layer_container_panel {
+	padding: 10px 15px;
+	background-color: black;
+	border-radius: 6px;
+	color: white;
+	font-size: 11px;
+	border: 1px solid #666666;
+	opacity: 0.70;
+}
+.ui-accordion .ui-accordion-content {
+    padding: 1em 2.2em;
+    border-top: 0px none;
+    overflow: auto;
+    opacity: 0.70;
+}
+
+#banner-izq {
+    height: 92px;
+    width: 209px;
+    float: left;
+    background: url("../static/img/left.jpg") no-repeat scroll 0px 0px transparent;
+    margin-top: 10px;
+}

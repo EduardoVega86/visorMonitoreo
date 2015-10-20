@@ -1,0 +1,236 @@
+{
+	"wmsLayers" : [
+		{
+			"id" : "gen-osm",
+			"type" : "osm",
+			"osmUrls" : [
+				"http://a.tile.openstreetmap.org/${z}/${x}/${y}.png",
+				"http://b.tile.openstreetmap.org/${z}/${x}/${y}.png",
+				"http://c.tile.openstreetmap.org/${z}/${x}/${y}.png"
+			]
+		},
+		{
+			"id" : "cycle-osm",
+			"type" : "osm",
+			"osmUrls" : [
+				"http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+            "http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+            "http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"
+			]
+		},
+		
+		
+		{
+			"id" : "transport-osm",
+			"type" : "osm",
+			"osmUrls" : [
+				"http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
+            "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
+            "http://c.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"
+			]
+		},
+		
+		{
+			"id" : "blue-marble",
+			"baseUrl" : "http://rdc-snsf.org/diss_geoserver/wms",
+			"wmsName" : "unredd:blue_marble",
+			"imageFormat" : "image/jpeg",
+			"visible" : true
+		}
+		, {
+			"id" : "licencias",
+			"baseUrl" : "http://172.16.0.242:8081/geoserver/wms",
+			"wmsName" : "suia_geomapas:licencias",
+			"imageFormat" : "image/png8",
+			"visible" : true,
+			"sourceLink" : "http://172.16.0.242:8081/geoserver/suia_geomapas/wms?service=WMS&version=1.1.0&request=GetMap&layers=suia_geomapas:licencias&styles=&bbox=-80.9976043701172,-4.87494421005249,-76.8888397216797,1.31708109378815&width=339&height=512&srs=EPSG:4326&format=image%2Fpng",
+			"sourceLabel" : "WRI",
+			"queryable" : true
+		}
+		,
+		{
+			"id" : "deforestacion",
+			"baseUrl" : "http://localhost:8080/geoserver/wms",
+			"wmsName" : "cite:DEFORESTACION_2000_2008",
+			"imageFormat" : "image/png8",
+			"sourceLink" : "http://localhost:8080/geoserver/cite/wms?service=WMS&version=1.1.0&request=GetMap&layers=cite:DEFORESTACION_2000_2008&styles=&bbox=507705.3125,9442003.0,1139581.625,1.016384E7&width=448&height=512&srs=EPSG:32717&format=image%2Fpng",
+			"sourceLabel" : "WRI",
+			"visible" : true,
+			"queryable" : true
+			
+		},
+		{
+			"id" : "condor",
+			"baseUrl" : "http://localhost:8080/geoserver/wms",
+			"wmsName" : "CondorAndino",
+			"imageFormat" : "image/png8",
+			"sourceLink" : "http://localhost:8080/geoserver/monitoreo/wms?service=WMS&version=1.1.0&request=GetMap&layers=monitoreo:CondorAndino&styles=&bbox=773642.375,9798179.0,813063.0,9976303.0&width=113&height=512&srs=EPSG:32717&format=image%2Fpng",
+			"sourceLabel" : "WRI",
+			"visible" : true,
+			"queryable" : true
+			
+		},
+		{
+			"id" : "ruta_condor",
+			"baseUrl" : "http://localhost:8080/geoserver/wms",
+			"wmsName" : "RutaCondores",
+			"imageFormat" : "image/png8",
+			"sourceLink" : "http://localhost:8080/geoserver/monitoreo/wms?service=WMS&version=1.1.0&request=GetMap&layers=monitoreo:RutaCondores&styles=&bbox=777170.076243706,9884061.28101136,821364.614878447,9949903.12034705&width=343&height=512&srs=EPSG:32717&format=image%2Fpng",
+			"sourceLabel" : "WRI",
+			"visible" : true,
+			"queryable" : true
+			
+		},
+		{
+			"id" : "pane",
+			"baseUrl" : "http://localhost:8080/geoserver/wms",
+			"wmsName" : "pane",
+			"imageFormat" : "image/png8",
+			"sourceLink" : "http://localhost:8080/geoserver/monitoreo/wms?service=WMS&version=1.1.0&request=GetMap&layers=monitoreo:pane&styles=&bbox=-807386.5,9493907.0,1153624.0,1.0257356E7&width=847&height=330&srs=EPSG:32717&format=image%2Fpng",
+			"sourceLabel" : "WRI",
+			"visible" : true,
+			
+			"queryable" : true
+			
+		}
+		,
+		 {
+			"id" : "provinces",
+			"baseUrl" : "http://demo1.geo-solutions.it/diss_geoserver/wms",
+			"wmsName" : "unredd:drc_provinces",
+			"imageFormat" : "image/png8",
+			"visible" : true,
+			"sourceLink" : "http://www.wri.org/publication/interactive-forest-atlas-democratic-republic-of-congo",
+			"sourceLabel" : "WRI",
+			"queryable" : true
+		},
+		{
+        "id" : "google-maps",
+        "type" : "gmaps",
+        "gmaps-type" : "HYBRID",
+        "visible" : true
+}
+	],
+
+	"portalLayers" : [
+		{
+			"id" : "blue-marble",
+			"active" : false,
+			"label" : "Blue marble",
+			"layers" : [ "blue-marble" ]
+		},
+		{
+			"id" : "osm-layer",
+			"active" : false,
+			"label" : "OSM-street",
+			"layers" : [ "gen-osm" ]
+		},
+		{
+			"id" : "osm-layer-cycle",
+			"active" : false,
+			"label" : "OSM-cycle",
+			"layers" : [ "cycle-osm" ]
+		},
+		{
+			"id" : "osm-layer-transport",
+			"active" : false,
+			"label" : "OSM-transport",
+			"layers" : [ "transport-osm" ]
+		}, 
+			{
+			"id" : "hibrid_gm",
+			"active" : true,
+			"label" : "Hibrid-google-maps",
+			"layers" : [ "google-maps" ]
+		}, 
+		{
+			"id" : "provinces",
+			"active" : false,
+			"infoFile" : "provinces_def.html",
+			"label" : "${provinces}",
+			"layers" : [ "provinces" ],
+			"inlineLegendUrl" : "http://demo1.geo-solutions.it/diss_geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=unredd:drc_provinces&TRANSPARENT=true"
+		},
+		{
+			"id" : "licencia_layer",
+			"active" : false,
+			"label" : "licencia",
+			"inlineLegendUrl" : "http://172.16.0.242:8081/geoserver/suia_geomapas/wms?service=WMS&version=1.1.0&layers=suia_geomapas:licencias&styles=&bbox=-80.9976043701172,-4.87494421005249,-76.8888397216797,1.31708109378815&width=339&height=512&srs=EPSG:4326&format=image%2Fpng",
+			"layers" : [ "licencias" ]
+			
+		},
+		{
+			"id" : "pane_layer",
+			"active" : false,
+			"label" : "áreas protegidas",
+			
+			
+			"layers" : [ "pane" ]
+			
+			
+			
+		},
+		{
+			"id" : "condor_layer",
+			"active" : false,
+			"label" : "condor",
+			"timeInstances" : "2015-02-21,2015-02-23,2015-02-22,2015-02-24,2015-02-25",
+			
+			"layers" : [ "condor" ],
+			"date-format" : "DD-MM-YYYY"
+			
+			
+			
+		},
+		{
+			"id" : "ruta_layer",
+			"active" : false,
+			"label" : "ruta",
+					
+			"layers" : [ "ruta_condor" ]
+			
+			
+			
+		}
+		,
+		{
+			"id" : "deforestacion_layer",
+			"active" : false,
+			"label" : "deforestacion",
+			"inlineLegendUrl" : "http://localhost:8080/geoserver/cite/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=cite:DEFORESTACION_2000_2008&TRANSPARENT=true",
+			"layers" : ["deforestacion" ]
+			
+			
+			
+		},
+		
+		 {
+			"id" : "provinces_title_placeholder",
+			"label" : "Provincias"
+		}
+	],
+
+	"groups" : [
+		{
+			"id" : "base",
+			"label" : "${base_layers}",
+			"infoFile": "base_layers.html",
+			"items" : [
+				
+				{
+					"id" : "innerGM",
+					"label" : "Google Maps",
+					"items": ["hibrid_gm"]
+				}
+			]
+		}, {
+			"id" : "admin",
+			"label" : "${admin_areas}",
+			"items" : ["provinces" ]
+		}, {
+			"id" : "landcover",
+			"label" : "Prueba SUIA",
+			"items" : [ "licencia_layer","deforestacion_layer","pane_layer","ruta_layer","condor_layer"]
+		}
+	]
+}
